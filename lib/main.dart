@@ -116,35 +116,26 @@ class _AttimuitePageState extends State<AttimuitePage> {
                   onPressed: () {
                     selectHand('👆');
                   },
-                  child: Text('👆'),
+                  child: Text('上'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     selectHand('👈');
                   },
-                  child: Text('👈'),
+                  child: Text('左'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     selectHand('👇');
                   },
-                  child: Text('👇'),
+                  child: Text('下'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     selectHand('👉');
                   },
-                  child: Text('👉'),
+                  child: Text('右'),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text('上'),
-                Text('左'),
-                Text('下'),
-                Text('右'),
               ],
             ),
           ],
