@@ -47,6 +47,8 @@ class _AttimuitePageState extends State<AttimuitePage> {
   }
 
   void generateComputerHand() {
+    /// スペルミス！
+    /// rndomNumber -> randomNumber
     final rndomNumber = Random().nextInt(4);
     computeHand = randomNumberToHand(rndomNumber);
   }
