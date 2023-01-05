@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,10 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AttimuitePage(),
+      home: const AttimuitePage(),
     );
   }
 }
+
 class AttimuitePage extends StatefulWidget {
   const AttimuitePage({super.key});
 
@@ -35,22 +35,21 @@ class _AttimuitePageState extends State<AttimuitePage> {
 
   int win = 0;
 
-  void selectHand (String selectedHand) {
+  void selectHand(String selectedHand) {
     myhand = selectedHand;
     print(myhand);
     generateComputerHand();
     judge();
-    setState(() {
-    });
+    setState(() {});
   }
 
-  void generateComputerHand(){
+  void generateComputerHand() {
     final rndomNumber = Random().nextInt(4);
     computeHand = randomNumberToHand(rndomNumber);
   }
 
   String randomNumberToHand(int randomNumber) {
-    switch(randomNumber) {
+    switch (randomNumber) {
       case 0:
         return '👆';
       case 1:
@@ -65,8 +64,8 @@ class _AttimuitePageState extends State<AttimuitePage> {
   }
 
   // 勝敗判定の関数
-  void judge(){
-    if( myhand == computeHand ) {
+  void judge() {
+    if (myhand == computeHand) {
       win = 0;
     } else {
       win = win + 1;
@@ -76,8 +75,8 @@ class _AttimuitePageState extends State<AttimuitePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar (
-        title: Text('あっちむいてほい！'),
+      appBar: AppBar(
+        title: const Text('あっちむいてほい！'),
       ),
       body: Center(
         child: Column(
@@ -86,29 +85,31 @@ class _AttimuitePageState extends State<AttimuitePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('勝利スコア : '),
-                Text(win.toString(),
-                style: TextStyle(
-                  fontSize: 32,
-                ),),
-                Text(' 回'),
+                const Text('勝利スコア : '),
+                Text(
+                  win.toString(),
+                  style: const TextStyle(
+                    fontSize: 32,
+                  ),
+                ),
+                const Text(' 回'),
               ],
             ),
-            SizedBox(height: 48),
+            const SizedBox(height: 48),
             Text(
               computeHand,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 32,
               ),
             ),
-            SizedBox(height: 48),
+            const SizedBox(height: 48),
             Text(
               myhand,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 32,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -116,31 +117,31 @@ class _AttimuitePageState extends State<AttimuitePage> {
                   onPressed: () {
                     selectHand('👆');
                   },
-                  child: Text('👆'),
+                  child: const Text('👆'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     selectHand('👈');
                   },
-                  child: Text('👈'),
+                  child: const Text('👈'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     selectHand('👇');
                   },
-                  child: Text('👇'),
+                  child: const Text('👇'),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     selectHand('👉');
                   },
-                  child: Text('👉'),
+                  child: const Text('👉'),
                 ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+              children: const [
                 Text('上'),
                 Text('左'),
                 Text('下'),
