@@ -29,6 +29,8 @@ class AttimuitePage extends StatefulWidget {
 }
 
 class _AttimuitePageState extends State<AttimuitePage> {
+  /// 単語の区切りは大文字になっていた方がよいです
+  /// myhand -> myHand
   String myhand = '👆';
 
   String computeHand = '👆';
