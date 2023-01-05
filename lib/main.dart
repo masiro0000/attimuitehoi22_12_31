@@ -68,9 +68,12 @@ class _AttimuitePageState extends State<AttimuitePage> {
     }
   }
 
+  /// 関数や変数の上にコメントを書くなら /// スラッシュは3つの方が良い
+  /// 理由はこちらをご覧ください！ https://www.cresc.co.jp/tech/java/Google_Dart2/language/comments/comments.html
   // 勝敗判定の関数
   void judge() {
     if (myhand == computeHand) {
+      // <- 簡潔な条件分岐で素晴らしい
       win = 0;
     } else {
       win = win + 1;
