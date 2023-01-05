@@ -90,19 +90,17 @@ class _AttimuitePageState extends State<AttimuitePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text('勝利スコア : '),
-                Text(
-                  win.toString(),
-                  style: const TextStyle(
-                    fontSize: 32,
-                  ),
+            // 文字列の集まりなので、Text.richを使って下揃えにしたほうがベースラインがそろっていて気持ちいい
+            Text.rich(TextSpan(children: [
+              const TextSpan(text: '勝利スコア : '),
+              TextSpan(
+                text: '$win',
+                style: const TextStyle(
+                  fontSize: 32,
                 ),
-                const Text(' 回'),
-              ],
-            ),
+              ), // toString を使わず $win とかいた方が簡潔！
+              const TextSpan(text: ' 回'),
+            ])),
             const SizedBox(height: 48),
             Text(
               computeHand,
