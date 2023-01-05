@@ -119,39 +119,51 @@ class _AttimuitePageState extends State<AttimuitePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    selectHand('👆');
-                  },
-                  child: const Text('👆'),
+                /// ボタンの真下に文字があった方が揃っていて気持ちいい
+                Column(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        selectHand('👆');
+                      },
+                      child: const Text('👆'),
+                    ),
+                    const Text('上'),
+                  ],
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    selectHand('👈');
-                  },
-                  child: const Text('👈'),
+                Column(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        selectHand('👈');
+                      },
+                      child: const Text('👈'),
+                    ),
+                    const Text('左'),
+                  ],
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    selectHand('👇');
-                  },
-                  child: const Text('👇'),
+                Column(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        selectHand('👇');
+                      },
+                      child: const Text('👇'),
+                    ),
+                    const Text('下'),
+                  ],
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    selectHand('👉');
-                  },
-                  child: const Text('👉'),
+                Column(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        selectHand('👉');
+                      },
+                      child: const Text('👉'),
+                    ),
+                    const Text('右'),
+                  ],
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                Text('上'),
-                Text('左'),
-                Text('下'),
-                Text('右'),
               ],
             ),
           ],
