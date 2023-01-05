@@ -33,6 +33,7 @@ class _AttimuitePageState extends State<AttimuitePage> {
   /// myhand -> myHand
   String myhand = '👆'; // <- 絵文字を使っていてかわいい！
 
+  /// 意味的には computeHand -> computerHand のほうがよいかも
   String computeHand = '👆';
 
   int win = 0;
